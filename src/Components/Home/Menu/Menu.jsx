@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "./Modal.jsx";
+import img from "../../../assets/img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUtensils,
@@ -278,7 +279,13 @@ const [showModal, setShowModal] = useState(false); // Exemple d'initialisation
 
   return (
 
-    <div className="py-16 bg-black" >
+      <div className="py-16 bg-black "style={{
+        backgroundImage: `url(${img})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center", 
+        backgroundRepeat: "no-repeat",
+        
+      }} >
 
     {  showModal&& <Modal item={selectedItem} setShowModal={setShowModal} />}
       <div className={`max-w-7xl mx-auto text-center mb-12 ${showModal ? "opacity-50" : "opacity-100"}`} >
